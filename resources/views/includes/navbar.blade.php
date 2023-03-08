@@ -19,7 +19,7 @@
                         <a class="nav-link @if (Route::is('admin.home')) active @endif" href="{{url('/') }}">{{ __('Home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link @if (request()->routeIs('admin.projects*')) active @endif" href="{{url('admin.projects.index') }}">{{ __('Projects') }}</a>
+                        <a class="nav-link @if (request()->routeIs('admin.projects*')) active @endif" href="{{ route ('admin.projects.index') }}">{{ __('Projects') }}</a>
                     </li>
                 @endauth
             </ul>
