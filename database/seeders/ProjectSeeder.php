@@ -15,13 +15,14 @@ class ProjectSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-       for($i = 0; $i < 5; $i++){
+       for($i = 0; $i < 15; $i++){
         $project = new Project();
 
         $project->name = $faker->words(3, true);
         $project->description = $faker->paragraphs(15, true);
-        $project->image = $faker->imageUrl(250, 250);
+        // $project->image = $faker->imageUrl(250, 250);
         $project->prog_url = $faker->url();
+        $project->is_published = $faker->boolean();
         $project->save();
        }
     }

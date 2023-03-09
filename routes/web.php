@@ -25,6 +25,9 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::get('/',[AdminHomeController::class, 'index'])->name('home');
     // Rotte del project
     Route::resource('/projects', ProjectController::class);   
+     // Rotte del toggle
+     Route::patch('/projects/{project}/toggle', [ProjectController::class, 'toggle'])->name('projects.toggle'); 
+
 });
 
 
